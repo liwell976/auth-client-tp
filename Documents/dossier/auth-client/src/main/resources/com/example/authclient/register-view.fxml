@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.authclient.RegisterController"
+      alignment="CENTER">
+    <padding><Insets top="30" right="40" bottom="30" left="40"/></padding>
+
+    <Label text="Inscription" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="emailField" promptText="Email"/>
+    <PasswordField fx:id="passwordField" promptText="Mot de passe (12 car. min)"
+                   onKeyReleased="#handlePasswordStrength"/>
+    <PasswordField fx:id="passwordConfirmField" promptText="Confirmer le mot de passe"/>
+
+    <Label fx:id="strengthLabel" text="Force du mot de passe : "
+           style="-fx-font-weight: bold;"/>
+
+    <Label fx:id="messageLabel" style="-fx-text-fill: red;"/>
+
+    <Button text="S'inscrire" onAction="#handleRegister"
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-min-width: 200px;"/>
+    <Button text="Retour connexion" onAction="#handleGoToLogin"
+            style="-fx-background-color: #607D8B; -fx-text-fill: white; -fx-min-width: 200px;"/>
+</VBox>

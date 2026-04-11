@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="15" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.authclient.LoginController"
+      alignment="CENTER">
+    <padding><Insets top="30" right="40" bottom="30" left="40"/></padding>
+
+    <Label text="Connexion" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="emailField" promptText="Email"/>
+    <PasswordField fx:id="passwordField" promptText="Mot de passe"/>
+
+    <Label fx:id="messageLabel" style="-fx-text-fill: red;"/>
+
+    <Button text="Se connecter" onAction="#handleLogin"
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-min-width: 200px;"/>
+    <Button text="S'inscrire" onAction="#handleGoToRegister"
+            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-min-width: 200px;"/>
+</VBox>

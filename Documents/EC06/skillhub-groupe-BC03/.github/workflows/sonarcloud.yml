@@ -12,7 +12,7 @@ on:
 
 jobs:
   # ==========================================
-  # Job 1: Tests automatisés (Le pré-requis absolu)
+  # Job 1: Tests automatisés
   # ==========================================
   tests-unitaires:
     name: Exécution des tests (Laravel)
